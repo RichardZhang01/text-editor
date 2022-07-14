@@ -1,14 +1,18 @@
 {
     "name": "JATE",
     "version": "1.0.0",
-    "description": "",
+    "description": "A single-page application that meets the PWA criteria. This app also features data persistence techniques that serve as redundancy, and additionally functions offline.",
     "main": "server.js",
     "scripts": {
         "server": "nodemon server.js --ignore client"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "keywords": [
+        "PWA",
+        "full-stack",
+        "text-editor"
+    ],
+    "author": "Richard Zhang",
+    "license": "MIT",
     "dependencies": {
         "express": "^4.17.1"
     },
