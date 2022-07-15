@@ -192,6 +192,20 @@ h1 {
   background-color: #31a9e1;
 }
 
+.btn.installed {
+  cursor: default !important;
+  background-color: #1a1a1a !important;
+}
+
+.btn.installed:hover {
+  cursor: default !important;
+  background-color: #1a1a1a !important;
+}
+
+.hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .nav-btn {
     display: none;
