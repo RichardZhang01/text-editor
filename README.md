@@ -1,142 +1,81 @@
-# 19 Progressive Web Applications (PWA): Text Editor
+# Text Editor
 
-## Your Task
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+[![Tech-blog-app-button](https://www.herokucdn.com/deploy/button.svg)](https://hidden-garden-70772.herokuapp.com/)
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
 
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+## Description
 
-You will deploy this full-stack application to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
+- This application (JATE) is a simple text editor that will highlight JavaScript syntax. It is an example of a progressive web application (PWA), meaning it will function regardless of internet access (as long as the page has been visited once online), and can even be downloaded and run natively on your machine. 
+- This application features the utlization of a service worker to control the page, data caches to speed up page loading and provide offline functionality, indexedDB and localStorage for client data storage and redundancy, as well as the ability to install the application locally.
+- PWAs are incredibly useful and powerful, but they are tricky to learn especially for a new programmer. My motivation behind this project was to delve into the technologies and syntax required to develop an application that meets all the criteria of a PWA.
 
-## User Story
+## Table of Contents
 
-```md
-AS A developer
-I WANT to create notes or code snippets with or without an internet connection
-SO THAT I can reliably retrieve them for later use
-```
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Demonstration](#demonstration)
+4. [License](#license)
+5. [How to Contribute](#how-to-contribute)
+6. [Questions?](#questions)
 
-## Acceptance Criteria
+## <a id="installation"></a>Installation
 
-```md
-GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure
-WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client
-WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors
-WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Heroku
-THEN I should have proper build scripts for a webpack application
-```
+**This application is deployed to Heroku, and you can access it [here](https://hidden-garden-70772.herokuapp.com/).**
 
-## Mock-Up
+Alternatively, you can clone this repo. 
 
-The following animation demonstrates the application functionality:
+If performing a manual installation, you need [Node.js](https://nodejs.org/en/).
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
+To install dependencies, open in [Visual Studio Code](https://code.visualstudio.com/), and in the terminal run: 
 
-The following image shows the application's `manifest.json` file:
+      npm install 
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
 
-The following image shows the application's registered service worker:
+## <a id="usage"></a>Usage
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
+**This application is deployed to Heroku, and you can access it [here](https://hidden-garden-70772.herokuapp.com/).**
 
-The following image shows the application's IndexedDB storage:
+Alternatively, once the application is installed and opened in Visual Studio Code, or navigated to using Git Bash (or similar command-line tool), run: 
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+      npm start 
 
-## Grading Requirements
+The application is written to run on port 3000, but you can change the port number by altering it in the `server/server.js` file.
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+Once the server has been started, in your browser, navigate to http://localhost:3000
 
-This Challenge is graded based on the following criteria:
+## <a id="demonstration"></a> Demonstration
 
-### Technical Acceptance Criteria: 40%
+**This application is deployed to Heroku, and you can access it [here](https://hidden-garden-70772.herokuapp.com/).**
 
-* Satisfies all of the above acceptance criteria plus the following:
+A screenshot:
 
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
+![Screenshot of the application](./assets/images/screenshot-1.png)
 
-  * The application works without an internet connection
+## <a id="license"></a>License
 
-  * Automatically saves content inside the text editor when the DOM window is unfocused
+This application is covered under the [MIT](https://opensource.org/licenses/MIT) license
 
-  * Bundled with webpack
+----------------------------------------------------------------
 
-  * Create a service worker with workbox that Caches static assets
+  Copyright © 2022 Richard Zhang
 
-  * The application should use babel in order to use async / await
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
+  ----------------------------------------------------------------
 
-  * Can be installed as a Progressive Web Application
+## <a id="how-to-contribute"></a>How to Contribute
 
-### Deployment: 32%
+If you want to contribute to this project and make it better, your help is very welcome. This was a school project, so anything you want to do to it, go for it. You can also contact me directly through the links below.
 
-* Application deployed to Heroku at live URL with build scripts
+## <a id="questions"></a>Questions?
 
-* Application loads with no errors
+Have any questions? Here is a list of my links:
+- GitHub: [RichardZhang01](https://github.com/RichardZhang01)
+- Email: richardzhiyuanzhang@gmail.com
 
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
