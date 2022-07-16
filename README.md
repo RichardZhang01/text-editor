@@ -8,7 +8,7 @@
 ## Description
 
 - This application (JATE) is a simple text editor that will highlight JavaScript syntax. It is an example of a progressive web application (PWA), meaning it will function regardless of internet access (as long as the page has been visited once online), and can even be downloaded and run natively on your machine. 
-- This application features the utlization of a service worker to control the page, data caches to speed up page loading and provide offline functionality, indexedDB and localStorage for client data storage and redundancy, as well as the ability to install the application locally.
+- This application features the utlization of a service worker to control the page, data caches (controlled by the service worker) to speed up page loading and provide offline functionality, indexedDB and localStorage for client data storage and redundancy, as well as the ability to install the application locally.
 - PWAs are incredibly useful and powerful, but they are tricky to learn especially for a new programmer. My motivation behind this project was to delve into the technologies and syntax required to develop an application that meets all the criteria of a PWA.
 
 ## Table of Contents
